@@ -60,3 +60,31 @@ A modern, responsive portfolio website with a neon theme, built using HTML, CSS,
 - CSS3
 - JavaScript
 - Google Fonts (Orbitron)
+# task 3. calculator
+# Basic Calculator
+
+A simple, user-friendly calculator built with HTML, CSS, and JavaScript. This calculator provides basic arithmetic operations with a clean and responsive interface.
+
+## Features
+
+- Basic arithmetic operations (addition, subtraction, multiplication, division)
+- Clear (C) and Delete (DEL) functionality
+- Decimal point support
+- Error handling for division by zero
+- Responsive design
+- Clean and modern UI using CSS Grid
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+  
+  ## Usage
+- Click number buttons (0-9) to input numbers
+- Use operator buttons (+, -, *, /) for calculations
+- Press '=' to see the result
+- 'C' button clears all input
+- 'DEL' button removes the last entered digit
+- Decimal point (.) for floating-point numbers
+- 
