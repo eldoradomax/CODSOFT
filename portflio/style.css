@@ -1,0 +1,307 @@
+:root {
+    --neon-color: #00ff88;
+    --neon-shadow: 0 0 7px #00ff88,
+                   0 0 10px #00ff88,
+                   0 0 21px #00ff88;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-around; 
+    flex-direction: row-reverse;
+    align-items: center;
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--neon-color);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 0; 
+}
+.nav-logo {
+    margin-left: 1px; 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        justify-content: center; 
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.2rem;
+    }
+
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.8rem 0.5rem;
+    }
+
+    .nav-links {
+        gap: 0.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+    }
+}
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon-color);
+    text-shadow: var(--neon-shadow);
+    margin-left: 2rem; 
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: var(--neon-color);
+    text-shadow: 0 0 5px var(--neon-color);
+}
+/* Adding scroll arrow styles */
+.scroll-arrow {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: var(--neon-color);
+    animation: bounce 2s infinite;
+    text-shadow: var(--neon-shadow);
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-30px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-15px) translateX(-50%);
+    }
+}
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+.nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(10, 25, 47, 0.98);
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+.nav-links li {
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+    }
+
+    }
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px; /* Adding this line to prevent content from hiding under navbar */
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a192f;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.6;
+}
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.neon-wrapper {
+    animation: flicker 1.5s infinite alternate;
+}
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: var(--neon-shadow);
+}
+.neon-subtext {
+    font-size: 1.5rem;
+    color: var(--neon-color);
+}
+.section-title {
+    text-align: center;
+    color: var(--neon-color);
+    text-shadow: 0 0 5px var(--neon-color);
+    margin: 2rem 0;
+}
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Adding these new styles for about section text */
+.about-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #e6e6e6;
+    letter-spacing: 0.5px;
+}
+
+#about .section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--neon-color);
+    box-shadow: var(--neon-shadow);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.skill-item {
+    background: rgba(0, 255, 136, 0.1);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--neon-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--neon-color);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+.neon-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    color: var(--neon-color);
+    border: 2px solid var(--neon-color);
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+.neon-button:hover {
+    background: var(--neon-color);
+    color: #0a192f;
+    box-shadow: var(--neon-shadow);
+}
+.contact-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 255, 136, 0.05);
+}
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: var(--neon-shadow);
+    }
+    20%, 22%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .neon-text {
+        font-size: 2.5rem;
+    }
+}
